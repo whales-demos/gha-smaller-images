@@ -1,0 +1,16 @@
+name: Runtimes Install With Specialized Containers
+run-name: Runtimes Install 🐳🚀
+on: [push]
+jobs:
+   Install-Go:
+    runs-on: ubuntu-latest
+    container:
+      image: golang:1.21.3-bookworm
+    steps:
+      - run: go version
+   Install-NodeJS:
+    runs-on: ubuntu-latest
+    container:
+      image: node:21.6.2-slim
+    steps:
+      - run: node --version
